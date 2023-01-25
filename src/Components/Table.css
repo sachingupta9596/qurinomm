@@ -1,0 +1,102 @@
+.tableContainer {
+  overflow-x: auto;
+  height: 60vh;
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: auto;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  font-size: 1rem;
+}
+thead {
+  max-height: 40px;
+}
+td,
+th {
+  padding: 8px;
+  min-width: 60px;
+
+  text-align: center;
+  max-height: 40px;
+}
+
+thead tr {
+  height: 30px;
+  background: #d3d3d3;
+
+  font-weight: 900;
+}
+
+tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #e3f1d5;
+}
+tbody tr:last-child {
+  border: 0;
+}
+tr {
+  padding: 2px;
+  font-size: 1rem;
+}
+
+blockquote {
+  color: white;
+  text-align: center;
+}
+#Campaign {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.check {
+  display: none;
+}
+.button {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.button::before {
+  width: 100%;
+  height: 100%;
+  background-color: #bbb;
+  border-radius: 35px;
+  border: 1px solid #333;
+  transition: background-color 0.5s ease;
+}
+
+.button::after {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 1px #000;
+  transition: left 0.5s ease;
+}
+
+.check:checked + .button::before {
+  background-color: #0000ff;
+}
+
+.check:checked + .button::after {
+  left: 50%;
+}
